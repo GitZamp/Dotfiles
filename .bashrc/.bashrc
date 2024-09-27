@@ -112,3 +112,20 @@ ex ()
   fi
 }
 neofetch
+
+function pip(){
+  if [ "${CONDA_PROMPT_MODIFIER-}" = "(base) " ] && [ "$1" = "install" ]; then
+    echo "Not allowed in base"
+  else
+    command pip "$@"
+  fi
+}
+
+function extended_conda(){
+  if [ "${CONDA_PROMPT_MODIFIER-}" = "(base) " ] && [ "$1" = "install" ]; then
+    echo "Not allowed in base"
+  else
+    conda "$@"
+  fi
+}
+alias conda=extended_conda
