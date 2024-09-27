@@ -111,8 +111,9 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
-neofetch
 
+#custom#
+neofetch
 function pip(){
   if [ "${CONDA_PROMPT_MODIFIER-}" = "(base) " ] && [ "$1" = "install" ]; then
     echo "Not allowed in base"
